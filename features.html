@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <!-- <link rel="icon" href="resources/images/icon.png" /> -->
+        <link
+            rel="shortcut icon"
+            href="https://img.icons8.com/color/344/goal--v1.png"
+            type="image/x-icon"
+        />
+        <title>Dart Calculator</title>
+    </head>
+    <body>
+        <!-- create a navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Dart Calculator</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                            >Features <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="history.html" class="nav-link">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rules.html" class="nav-link">Rules</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <h1>Features</h1>
+                        <p>
+                            Read all about the features of the calculator and
+                            how to use them properly <br />
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Player selection:</b> Here you can select the
+                                number of players for the current game. It will
+                                get locked automatically after the "Add Round"
+                                button is pressed to avoid accidentally changing
+                                it.
+                            </li>
+                            <li>
+                                <b>The input table:</b> Here you will input all
+                                the scores for the current round.
+                                <ul>
+                                    <li>
+                                        <b>The setup row:</b> The setup row
+                                        contains an input field to set the
+                                        number of points each player must earn
+                                        to win the game. It will get locked
+                                        automatically after the "Add Round"
+                                        button is pressed.
+                                    </li>
+                                    <li>
+                                        <b>Score remaining:</b> This row shows
+                                        the amount of points each player has
+                                        remaining that they have to reach in
+                                        order to win the game. It will updated
+                                        every time the "Add Round" button is
+                                        pressed.
+                                    </li>
+                                    <li>
+                                        <b>Round X:</b> This row shows the
+                                        number of the round in the first column.
+                                        After that, there are 3 input fields for
+                                        each player to put the data of their
+                                        throws in. Note, that it is not
+                                        necessary to input a <code>0</code>, but
+                                        you can rather just leave the fields
+                                        empty. The data is
+                                        <b>not case-sensitive</b>. The format is
+                                        as follows:
+                                        <ul>
+                                            <li>
+                                                <b>Bullseye Inner:</b>
+                                                <code>BI</code>
+                                            </li>
+                                            <li>
+                                                <b>Bullseye Outer:</b>
+                                                <code>BO</code>
+                                            </li>
+                                            <li>
+                                                <b>Single:</b> <code>1</code> to
+                                                <code>20</code>
+                                            </li>
+                                            <li>
+                                                <b>Double:</b>
+                                                <code>D1</code> to
+                                                <code>D20</code>
+                                            </li>
+                                            <li>
+                                                <b>Triple:</b>
+                                                <code>T1</code> to
+                                                <code>T20</code>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <b>Last Round:</b> Shows the points
+                                        earned in the last round. Will also show
+                                        the points, if the player overshoots the
+                                        target score.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>The "Add Round" button:</b> This button is
+                                locked by default, until a number of players is
+                                selected. Every time it is pressed, a round will
+                                get registered. This means, that the current
+                                round will get added to the history and the
+                                input fields will get cleared again.
+                            </li>
+                            <li>
+                                <b>The history:</b> The history is the box at
+                                the bottom. It will automatically have a new row
+                                added for every round registered. The format
+                                looks as follows:
+                                <ul>
+                                    <li>
+                                        <b>Round X:</b> Shows which round the
+                                        entry is from.
+                                    </li>
+                                    <li>
+                                        <b>First row of the player data:</b> The
+                                        first row of the playerdata shows a
+                                        summary of the calculated score based in
+                                        the throw inputs. The format is as
+                                        follows:
+                                        <code
+                                            >score1 + score2 + score3 =
+                                            total</code
+                                        >.
+                                    </li>
+                                    <li>
+                                        <b>Second row of the player data:</b>
+                                        The second row of the playerdata shows
+                                        the starting amount of points the player
+                                        had to reach and the amount of points
+                                        the player has to reach after this round
+                                        has passed. The format is as follows:
+                                        <code
+                                            >startScore ====>
+                                            scoreAfterThisRound</code
+                                        >.
+                                    </li>
+                                    <li>
+                                        <b>Average:</b> The average shows the
+                                        average scores per round. The format is
+                                        as follows:
+                                        <code
+                                            >averagePointsThisRounds
+                                            (averagePointsPerThrow)</code
+                                        >.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

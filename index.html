@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <link
+            rel="shortcut icon"
+            href="https://img.icons8.com/color/344/goal--v1.png"
+            type="image/x-icon"
+        />
+        <title>Dart Calculator</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Dart Calculator</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                            >Home <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="history.html" class="nav-link">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rules.html" class="nav-link">Rules</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <h1>Dart Score Calculator</h1>
+                        <p>
+                            <i>Calculate dart scores and review them.</i> <br />
+                            This website is a calculator for dart scores. It
+                            also shows you the entire history of scores this
+                            game. To learn more about how the calculator works,
+                            you can visit the
+                            <a href="features.html">Features</a> page. <br />
+                            If you want to learn more about the official dart
+                            rules, you can visit the
+                            <a href="rules.html">Rules</a> page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label
+                                            class="input-group-text"
+                                            for="inputGroupSelect01"
+                                            >Select the number of Players:
+                                        </label>
+                                    </div>
+                                    <select
+                                        class="custom-select"
+                                        id="inputGroupSelect01"
+                                    >
+                                        <option selected disabled>
+                                            Choose...
+                                        </option>
+                                        <option value="1">1 Player</option>
+                                        <option value="2">2 Players</option>
+                                        <option value="3">3 Players</option>
+                                        <option value="4">4 Players</option>
+                                        <option value="5">5 Players</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr
+                                    class="playdata_table_head"
+                                    id="playdata_table_head"
+                                ></tr>
+                            </thead>
+                            <tbody
+                                class="playdata_table_body"
+                                id="playdata_table_body"
+                            ></tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-12">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    id="add_round_button"
+                                    disabled="true"
+                                >
+                                    Add Round
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr
+                                    class="game_history_table_head"
+                                    id="game_history_table_head"
+                                ></tr>
+                            </thead>
+                            <tbody id="game_history_table_body"></tbody>
+                        </table>
+                        <br />
+                        <hr class="darker" />
+                        <br />
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="export_game_data_button"
+                            disabled="true"
+                        >
+                            Export Game Data
+                        </button>
+                        <br />
+                        <br />
+                        <label for="game_file_upload" class="form-label">Import game data files</label>
+                        <input type="file" class="form-control" id="game_file_upload" accept=".json">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
