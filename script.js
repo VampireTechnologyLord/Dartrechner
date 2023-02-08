@@ -811,7 +811,8 @@ globalHTML.gameFileUpload.addEventListener('change', function () {
         } else {
             if (
                 confirm(
-                    `Are you sure you want to import the game data? Players will NOT be able to continue the current game after the import! You should export it in case you want to save it before you continue with the import!`
+                    `Are you sure you want to import the game data? Players will NOT be able to continue the current game after the import!
+                    You should export it in case you want to save it before you continue with the import!`
                 )
             ) {
                 playdataTable.resetHead();
